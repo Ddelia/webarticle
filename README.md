@@ -5,10 +5,17 @@ Comenzile din git bash
 git clone https://github.com/Ddelia/webarticle.git
 
 cd webarticle
+
 composer install
+
 cp .env.example .env
+
 php artisan key:generate
+
 php artisan config:cache
+
 php artisan migrate
+
 php artisan db:seed
+
 php artisan serve

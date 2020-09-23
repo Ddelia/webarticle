@@ -2,7 +2,6 @@
 
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Role;
-use Spatie\Permission\Contracts\Permission;
 
 class RolesSeeder extends Seeder
 {
@@ -21,7 +20,7 @@ class RolesSeeder extends Seeder
         {
             if($e->getMessage() == 'There is no role named `admin`.')
             {
-                Role::create(['name' => 'admin'])->givePermissionTo(Permission::all());
+                Role::create(['name' => 'admin']);
             }
         }
 
